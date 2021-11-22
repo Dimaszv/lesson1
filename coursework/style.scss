@@ -1,0 +1,47 @@
+@mixin flex($dir, $al, $j){
+	display: flex;
+	flex-direction: $dir;
+	align-content: $al;
+	justify-content: $j;
+} 
+
+#block_card{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 270px;
+
+	
+}
+
+.cart{
+		
+
+	&__img{
+		display: flex;
+		height: 100%;
+
+		img{
+			width: 270px;
+		}
+	}
+	&__desc{
+		width: 270px;
+		background: #FAFAFA;
+		color: #000;
+		height: 116px;
+	}
+	&--color{
+		.cart__desc{
+			background: #FFFFFF;
+		box-shadow: 15px 15px 20px rgb(108 108 255 / 20%);
+		}
+
+	}
+	
+}
+.cart__text{
+	margin-top: 24px;
+	height: 74px;
+}
+
+		@include flex: (row, left, left)
